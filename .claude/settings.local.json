@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Read(//d/Code/Rory's Mods/**)",
+      "Read(//c/Users/Rodrigo Mendes/**)",
+      "Bash(unzip -l 'C:/Users/Rodrigo Mendes/AppData/Roaming/PrismLauncher/libraries/net/minecraftforge/forge/1.2.5-3.4.9.171/forge-1.2.5-3.4.9.171-client.jar')",
+      "Bash(grep \"\\\\.class$\")",
+      "Bash(awk '{print $4}')",
+      "Bash(where java *)",
+      "Bash(where javap *)",
+      "Read(//c/Program Files/Java/**)"
+    ]
+  }
+}
