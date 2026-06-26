@@ -9,19 +9,39 @@ public final class CtrlSprint {
 
     private CtrlSprint() {}
 
-    public static void tick(vq player, boolean sprintKeyDown, boolean movingForward) {
-        if (sprintKeyDown && movingForward) {
-            if (!player.W() && canSprint(player)) {
-                player.d(true);
-            }
-        } else {
-            if (player.W()) {
-                player.d(false);
-            }
-        }
-    }
+    /**
+     * Called each game tick. Returns the updated ctrlSprintActive flag.
+     *
+     * Only forces sprint ON when ctrlSprintActive becomes true.
+     * Only forces sprint OFF when ctrlSprintActive transitions from true to false,
+     * so vanilla double-W sprint is never interrupted.
+     */
+    public static boolean tick(vq player,
+                               boolean sprintKeyPressedThisTick,
+                               boolean ctrlSprintActive,
+                               boolean movingForward,
+                               boolean screenOpen) {
+        boolean wasActive = ctrlSprintActive;
 
-    private static boolean canSprint(vq player) {
-        return !player.V(); // isSneaking
+        // Activate on a fresh key-press edge while the conditions are met
+        if (sprintKeyPressedThisTick && movingForward && !screenOpen && !player.V()) {
+            ctrlSprintActive = true;
+        }
+
+        // Cancel our sprint when any stop condition is met
+        if (!movingForward || screenOpen || player.V()) {
+            ctrlSprintActive = false;
+        }
+
+        if (ctrlSprintActive && !player.W()) {
+            player.d(true);
+        } else if (wasActive && !ctrlSprintActive && player.W()) {
+            // We activated sprint and now our condition cleared — stop it.
+            // If the player is sprinting for vanilla reasons (double-W) and
+            // ctrlSprintActive was already false, we never reach this branch.
+            player.d(false);
+        }
+
+        return ctrlSprintActive;
     }
 }

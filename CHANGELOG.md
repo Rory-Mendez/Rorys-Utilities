@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.1] - 2026-06-26
+
+### Changed
+
+- **Ctrl Sprint** — Reworked from "hold Ctrl to sprint" to "press Ctrl once while moving
+  forward to start sprinting". The key may be released immediately; sprint continues until
+  W is released, a GUI opens, or the player sneaks. Vanilla double-W sprint is unaffected.
+
+---
+
 ## [0.1.0] - 2026-06-25
 
 ### Added

@@ -6,6 +6,10 @@ A lightweight quality-of-life mod for **Minecraft 1.2.5** with **Minecraft Forge
 
 ## Features
 
+### v0.1.1
+
+- **Ctrl Sprint** — Press Left Control (or your configured key) once while moving forward to start sprinting. You may release the key immediately; sprint continues until you release W, open a GUI, or sneak. Vanilla double-W sprint still works.
+
 ### v0.1.0
 
 - **Ctrl Sprint** — Hold Left Control (or your configured key) while moving forward to sprint, exactly like modern Minecraft. No double-tapping required.
@@ -25,7 +29,7 @@ A lightweight quality-of-life mod for **Minecraft 1.2.5** with **Minecraft Forge
 ## Installation
 
 1. Install **Minecraft Forge 3.4.9.171** for Minecraft 1.2.5.
-2. Drop `rorys-utilities-0.1.0.jar` into your `mods/` folder.
+2. Drop `rorys-utilities-0.1.1.jar` into your `mods/` folder.
 3. Launch Minecraft.
 
 Full instructions: [docs/INSTALL.md](docs/INSTALL.md)
@@ -54,7 +58,7 @@ sprintKey=29
 
 ## Folder Structure
 
-```
+```text
 rorys-utilities/
 ├── src/main/java/com/rorysmod/utilities/
 │   ├── RorysUtilities.java          ← Forge entry point
@@ -81,6 +85,7 @@ rorys-utilities/
 See [docs/ROADMAP.md](docs/ROADMAP.md).
 
 Planned:
+
 - Custom in-game keybind configuration
 - Additional quality-of-life utilities
 - In-game config GUI
@@ -102,7 +107,7 @@ This project follows [Semantic Versioning](https://semver.org/):
 - **MINOR** — new feature, backward compatible
 - **PATCH** — bug fix, no new feature
 
-Current version: **v0.1.0**
+Current version: **v0.1.1**
 
 ---
 

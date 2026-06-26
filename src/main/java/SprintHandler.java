@@ -22,6 +22,11 @@ public class SprintHandler implements ITickHandler {
 
     private final ModConfig config;
 
+    // Edge-detection state for the sprint key
+    private boolean sprintKeyWasDown;
+    // True while Ctrl Sprint is actively managing the player's sprint state
+    private boolean ctrlSprintActive;
+
     public SprintHandler(ModConfig config) {
         this.config = config;
     }
@@ -32,17 +37,21 @@ public class SprintHandler implements ITickHandler {
 
         Minecraft mc = FMLClientHandler.instance().getClient();
 
-        // Fields are Object in the stub; cast to actual runtime types here.
         if (mc == null || mc.h == null || mc.f == null) return;
-        if (mc.s != null) return; // screen open — suppress sprint
 
         vq player = (vq) mc.h;
         hu gs     = (hu) mc.A;
 
         boolean sprintKeyDown = Keyboard.isKeyDown(config.getSprintKeyCode());
         boolean movingForward = gs.n.e;
+        boolean screenOpen    = mc.s != null;
 
-        CtrlSprint.tick(player, sprintKeyDown, movingForward);
+        // True only on the tick the key first goes down
+        boolean sprintKeyPressedThisTick = sprintKeyDown && !sprintKeyWasDown;
+
+        ctrlSprintActive = CtrlSprint.tick(player, sprintKeyPressedThisTick, ctrlSprintActive, movingForward, screenOpen);
+
+        sprintKeyWasDown = sprintKeyDown;
     }
 
     @Override

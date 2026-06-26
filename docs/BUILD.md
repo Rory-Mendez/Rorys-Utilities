@@ -114,13 +114,13 @@ mkdir build\classes
 
 ```bat
 cd build\classes
-jar cf ..\..\rorys-utilities-0.1.0.jar .
+jar cf ..\..\rorys-utilities-0.1.1.jar .
 ```
 
 ### Step 3 — Verify
 
 ```bat
-jar -tf rorys-utilities-0.1.0.jar
+jar -tf rorys-utilities-0.1.1.jar
 ```
 
 Expected contents:
@@ -134,7 +134,7 @@ com/rorysmod/utilities/config/ModConfig.class
 
 ### Step 4 — Install
 
-Drop `rorys-utilities-0.1.0.jar` into the Prism Launcher instance `mods/` folder and launch.
+Drop `rorys-utilities-0.1.1.jar` into the Prism Launcher instance `mods/` folder and launch.
 
 ---
 
