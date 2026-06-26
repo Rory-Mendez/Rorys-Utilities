@@ -36,6 +36,7 @@ Thank you for considering a contribution. This document explains how to get invo
 ## Reporting Issues
 
 Open a GitHub issue with:
+
 - Minecraft version and Forge version.
 - Steps to reproduce.
 - Expected vs. actual behaviour.

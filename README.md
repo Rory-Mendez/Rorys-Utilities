@@ -15,7 +15,7 @@ A lightweight quality-of-life mod for **Minecraft 1.2.5** with **Minecraft Forge
 ## Requirements
 
 | Dependency | Version |
-|---|---|
+| --- | --- |
 | Minecraft | 1.2.5 |
 | Minecraft Forge | 3.4.9.171 |
 | Java | 8 |
