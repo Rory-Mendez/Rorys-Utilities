@@ -4,6 +4,14 @@ A lightweight quality-of-life mod for **Minecraft 1.2.5** with **Minecraft Forge
 
 ---
 
+Part of the **Rory's Mods** ecosystem.
+
+- (Rorys-Utilities) [https://github.com/Rory-Mendez/Rorys-Utilities]
+- (Rorys-Excavation) [https://github.com/Rory-Mendez/Rorys-Excavation]
+- (Rorys-Mod-Core) [https://github.com/Rory-Mendez/Rorys-Mod-Core]
+
+---
+
 ## Features
 
 ### v0.1.1
@@ -120,3 +128,5 @@ Current version: **v0.1.1**
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Rory's Utilities aims to modernize Minecraft 1.2.5 through lightweight, configurable quality-of-life improvements while preserving the classic gameplay experience.
